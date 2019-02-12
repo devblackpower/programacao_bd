@@ -1,16 +1,16 @@
 PL/SQL
-//declarar variaveis
+--declarar variaveis
 declare 
 a number (3) := 3;
 b number(3) := 4;
 c number(4)
 begin
 c:= a + b;
-//não tem print aqui
+--não tem print aqui
 end;
 
 
-bloco de programação
+--bloco de programação
 
 
 C
