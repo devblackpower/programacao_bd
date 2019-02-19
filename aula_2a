@@ -1,0 +1,11 @@
+declare
+  v_employee_id number(3) :=  100;
+  v_department_name departments.department_name%type;
+begin
+  select department_name into v_department_name
+    from departments dept
+    right join employees emp
+    on dept.department_id = emp.department_id
+    where employee_id = v_employee_id;
+  dbms_output.put_line('Departamento ' || v_department_name);
+end;
