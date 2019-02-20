@@ -7,10 +7,10 @@ is
 begin
     if p_id > 0 and p_id <999999 then
         select department_name into retorno
-         from departments dept
-         right join employees emp
-         on dept.department_id = emp.department_id
-         where employee_id = p_id;
+        from departments dept
+        right join employees emp
+        on dept.department_id = emp.department_id
+        where employee_id = p_id;
      else
         retorno := 'Fora da faixa valida'; -- estava estourando o tamanho da variavel
     end if;
@@ -26,4 +26,4 @@ begin
   x := func_retdept(100);
   dbms_output.put_line('x: ' || x);
   
-end
+end;
