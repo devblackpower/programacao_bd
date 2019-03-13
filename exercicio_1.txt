@@ -1,0 +1,10 @@
+Pessoa (criar essa tabela)
+#id number (6) (pk)
+*nome varchar2 (unique)
+°salario number(10,2)
+
+id - sequenciado pela função
+nome - não pode repetir (tratar acentos)
+salario - pode ser nulo, zero ou um valor positivo
+
+DICA: TRANSLATE + UPPER
