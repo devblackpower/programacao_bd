@@ -4,7 +4,7 @@ create table log_programacaoexecucao(
   parametros varchar2(4000) null,
   numero_erro number(6) not null,
   descricao_erro varchar2(4000) not null,
-  numero_linha_erro number not null,
+  numero_linha_erro varchar2(4000) not null,
   usuario varchar2(30) not null,
   datahora date not null,
   status char(1) not null,
