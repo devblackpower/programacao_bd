@@ -15,7 +15,7 @@ exception
     vparametros := 'pdivisor = ' || pdivisor || ','
                 || 'pdividendo = ' || pdividendo;
     vnumero := sqlcode;
-    vdescrevendo := sqlerrm;
+    vdescrerro := sqlerrm;
     insert into log_programacaoexecucao (id_log, nome_do_codigo, parametros, numero_erro,
       descricao_erro, numero_linha_erro, usuario, datahora, status, descricao_solucao) values
       (seq_log_progexec.nextval,'func_divisao', vparametros, vnumero, vdescrerro,
