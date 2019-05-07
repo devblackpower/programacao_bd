@@ -42,7 +42,7 @@ end;
 
 
 declare
-   number x;
+   x number;
 begin
     x := func_aumentosalpersonagem(3999);
     dbms_output.put_line('Novo salario: '||x);
