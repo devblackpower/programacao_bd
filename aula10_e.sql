@@ -1,8 +1,8 @@
-create or replace
+create or replace 
 function func_aumentosalpersonagem(p_id in number, p_novosalario in number)
 return number
 is
-    retorno number(3) : = 0;
+    retorno number(3) := 0;
     qtde number(1);
     vsalario personagem.salario%type;
     vparametros varchar2(4000);
@@ -15,13 +15,13 @@ begin
         if qtde = 1 then
             select salario into vsalario from personagem where id = p_id;
             update personagem set salario = p_novosalario where id = p_id;
-            insert into log_personagem( id_log, id, salario,_velho, salario_novo, usuario, datahora)
+            insert into log_personagem( id_log, id, salario_velho, salario_novo, usuario, datahora)
                 values(seq_log_progexec.nextval, p_id, vsalario, p_novosalario, user, sysdate);
         else
             retorno := -998;
         end if;
     else
-        returno := -999;
+        retorno := -999;
     end if;
     commit;
     return retorno;
